@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-12 text-center text-dark bgcolo">
+            <h2>{{barang_id.nama}}</h2>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 mt-3 text-center">
+            <img src="{{barang_id.foto_url}}" alt="" width="300px">
+        </div>
+        <div class="col-6 align-self-center">
+            <h5 class="text-success">Harga : {{barang_id.harga}} /pcs</h5>
+            <h5 class="text-">Tersedia : {{barang_id.ketersediaan}}</h5>
+            <p>
+                Deskripsi :
+                {% for desk in deskripsis %}
+                <ul>
+                    <li>{{desk}}</li>
+                </ul>
+                {% endfor %}
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

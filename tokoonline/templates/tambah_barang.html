@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <form method="POST">
+                    {% csrf_token %}
+                    <table border="2">
+                        {{ form_barang }}
+                    </table>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
